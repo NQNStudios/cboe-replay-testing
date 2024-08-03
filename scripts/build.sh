@@ -16,8 +16,8 @@ mv cboe/.git.tmp cboe/.git
 scenarios=scenarios/*
 for scen in $scenarios; do
     flags=""
-    if [ -d $scen ]; then
+    if [ -d "$scen" ]; then
         flags="-r"
     fi
-    cp $flags $scen "cboe/build/Blades of Exile/Blades of Exile Scenarios"
+    cp $flags "$scen" "cboe/build/Blades of Exile/Blades of Exile Scenarios"
 done
