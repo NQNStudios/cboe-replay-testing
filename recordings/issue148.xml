@@ -1,0 +1,18 @@
+<actions>
+    <load_prefs>DisplayMode = 5&#x0A;DrawTerrainAnimation = true&#x0A;DrawTerrainFrills = false&#x0A;DrawTerrainShoreFrills = true&#x0A;EasyMode = false&#x0A;GameRunBefore = true&#x0A;GameSpeed = 0&#x0A;GiveIntroHint = false&#x0A;LessWanderingMonsters = false&#x0A;PlaySounds = true&#x0A;ReceivedHelp = [22 23 1 2 55 0 22 23 1 2 55 0 22 23 1 2 55 0 22 23 1 2 55 0 22 23 1 2 55 0 54 0 47 65 36 37 48 49 62 0]&#x0A;RepeatRoomDescriptions = false&#x0A;ShowInstantHelp = true&#x0A;UIScale = 1&#x0A;UIScaleMap = 1&#x0A;</load_prefs>
+    <srand>1722698871</srand>
+    <startup_button_click>1</startup_button_click>
+    <control_click>
+        <id>okay</id>
+        <mods>0</mods>
+    </control_click>
+    <control_click>
+        <id>done</id>
+        <mods>0</mods>
+    </control_click>
+    <close_window></close_window>
+    <control_click>
+        <id>save</id>
+        <mods>0</mods>
+    </control_click>
+</actions>
