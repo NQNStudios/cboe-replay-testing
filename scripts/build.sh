@@ -13,11 +13,16 @@ fi
 rm -rf cboe/.git
 mv cboe/.git.tmp cboe/.git
 
+scenario_dir=""
+if [ "$(uname)" == "Darwin" ]; then
+    scenario_dir="$HOME/Library/Application Support/Blades of Exile/Scenarios"
+fi
+
 scenarios=scenarios/*
 for scen in $scenarios; do
     flags=""
     if [ -d "$scen" ]; then
         flags="-r"
     fi
-    cp $flags "$scen" "cboe/build/Blades of Exile/Blades of Exile Scenarios"
+    cp $flags "$scen" "$scenario_dir"
 done
