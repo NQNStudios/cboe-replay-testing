@@ -8,14 +8,22 @@ fi
 
 cp -r .git cboe/.git
 if [ "$(uname)" == "Darwin" ]; then
-    (cd cboe && scons debug=true game=true)
+    echo "Mac specific build prep"
+elif [[ $(uname) == *"MINGW"* ]]; then
+    scenario_dir="$APPDATA/Blades of Exile/Scenarios"
+    echo "Windows-specific build prep"
 fi
+
+(cd cboe && scons debug=true game=true)
+
 rm -rf cboe/.git
 mv cboe/.git.tmp cboe/.git
 
 scenario_dir=""
 if [ "$(uname)" == "Darwin" ]; then
     scenario_dir="$HOME/Library/Application Support/Blades of Exile/Scenarios"
+elif [[ $(uname) == *"MINGW"* ]]; then
+    scenario_dir="$APPDATA/Blades of Exile/Scenarios"
 fi
 
 scenarios=scenarios/*
